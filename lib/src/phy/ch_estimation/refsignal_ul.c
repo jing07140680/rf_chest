@@ -249,7 +249,6 @@ uint32_t srslte_refsignal_get_q(uint32_t u, uint32_t v, uint32_t N_sz)
 
 static void arg_r_uv_mprb(float* arg, uint32_t M_sc, uint32_t u, uint32_t v)
 {
-
   uint32_t N_sz = largest_prime_lower_than(M_sc);
   if (N_sz > 0) {
     float q    = srslte_refsignal_get_q(u, v, N_sz);
@@ -316,7 +315,14 @@ void srslte_refsignal_dmrs_pusch_get(srslte_refsignal_ul_t* q,
                                      cf_t*                  sf_symbols,
                                      cf_t*                  r_pusch)
 {
+  FILE *fp4 = fopen("frequency.txt","a+");
+  fprintf(fp4,"%d,%d\n",pusch_cfg->grant.n_prb_tilde[0],pusch_cfg->grant.L_prb);
+  fclose(fp4);
   for (uint32_t ns_idx = 0; ns_idx < 2; ns_idx++) {
+    printf("Getting DMRS from (start from PRB)n_prb: %d, (total PRB)L: %d, ns_idx: %d\n",
+         pusch_cfg->grant.n_prb_tilde[ns_idx],
+         pusch_cfg->grant.L_prb,
+         ns_idx);
     INFO("Getting DMRS from n_prb: %d, L: %d, ns_idx: %d\n",
          pusch_cfg->grant.n_prb_tilde[ns_idx],
          pusch_cfg->grant.L_prb,
@@ -455,7 +461,7 @@ int srslte_refsignal_dmrs_pusch_gen(srslte_refsignal_ul_t*             q,
 
       // Add cyclic prefix alpha
       float alpha = pusch_alpha(q, cfg, cyclic_shift_for_dmrs, ns);
-
+     
       // Do complex exponential and adjust amplitude
       for (int i = 0; i < SRSLTE_NRE * nof_prb; i++) {
         r_pusch[(ns % 2) * SRSLTE_NRE * nof_prb + i] = cexpf(I * (q->tmp_arg[i] + alpha * i));

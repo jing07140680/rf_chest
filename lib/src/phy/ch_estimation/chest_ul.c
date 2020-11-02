@@ -294,13 +294,26 @@ int srslte_chest_ul_estimate_pusch(srslte_chest_ul_t*     q,
 
   int nrefs_sym = nof_prb * SRSLTE_NRE;
   int nrefs_sf  = nrefs_sym * SRSLTE_NOF_SLOTS_PER_SF;
-
+  FILE *fp5 = fopen("time.txt","a+");
+  fprintf(fp5,"%d\n",sf->tti);
+  fclose(fp5);
   /* Get references from the input signal */
   srslte_refsignal_dmrs_pusch_get(&q->dmrs_signal, cfg, input, q->pilot_recv_signal);
 
   /* Use the known DMRS signal to compute Least-squares estimates */
   srslte_vec_prod_conj_ccc(
       q->pilot_recv_signal, q->dmrs_pregen.r[cfg->grant.n_dmrs][sf->tti % 10][nof_prb], q->pilot_estimates, nrefs_sf);
+  FILE *fp1 = fopen("receive_dmrs.txt","a+");
+  FILE *fp2 = fopen("nrefs_sf.txt","a+");
+  FILE *fp3 = fopen("pregen_dmrs.txt","a+");
+  fprintf(fp2,"%d\n",nrefs_sf);
+  for (int i =0; i< nrefs_sf; i++){
+    fprintf(fp3,"%g+%gi\n", creal(q->dmrs_pregen.r[cfg->grant.n_dmrs][sf->tti % 10][nof_prb][i]), cimag(q->dmrs_pregen.r[cfg->grant.n_dmrs][sf->tti % 10][nof_prb][i]));
+    fprintf(fp1,"%g+%gi\n", creal(q->pilot_estimates[i]), cimag(q->pilot_estimates[i]));
+  }
+  fclose(fp1);
+  fclose(fp2);
+  fclose(fp3);
 
   // Calculate time alignment error
   float ta_err = 0.0f;

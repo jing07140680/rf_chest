@@ -51,7 +51,7 @@ static int pusch_cp(srslte_pusch_t*       q,
                     cf_t*                 output,
                     bool                  is_shortened,
                     bool                  advance_input)
-{
+{ 
   cf_t* in_ptr  = input;
   cf_t* out_ptr = output;
 
@@ -85,7 +85,7 @@ static int pusch_cp(srslte_pusch_t*       q,
           out_ptr += grant->L_prb * SRSLTE_NRE;
         }
       }
-    }
+    } 
   }
   if (advance_input) {
     return in_ptr - input;
@@ -176,7 +176,7 @@ static int pusch_init(srslte_pusch_t* q, uint32_t max_prb, bool is_ue)
     if (!q->z) {
       goto clean;
     }
-
+ 
     ret = SRSLTE_SUCCESS;
   }
 clean:
@@ -386,7 +386,9 @@ int srslte_pusch_encode(srslte_pusch_t*      q,
          cfg->grant.nof_symb,
          cfg->grant.tb.nof_bits,
          cfg->grant.tb.rv);
+ 
 
+        
     bzero(q->q, cfg->grant.tb.nof_bits);
     if ((ret = srslte_ulsch_encode(&q->ul_sch, cfg, data->ptr, &data->uci, q->g, q->q)) < 0) {
       ERROR("Error encoding TB\n");
