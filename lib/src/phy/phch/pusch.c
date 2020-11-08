@@ -73,12 +73,17 @@ static int pusch_cp(srslte_pusch_t*       q,
       if (l != L_ref) {
         uint32_t idx = SRSLTE_RE_IDX(
             q->cell.nof_prb, l + slot * SRSLTE_CP_NSYMB(q->cell.cp), grant->n_prb_tilde[slot] * SRSLTE_NRE);
+	printf("Data start(prb):%d\n",grant->n_prb_tilde[slot]);
+	printf("Data symbol:%d\n",l);
         if (advance_input) {
+	  printf("Putting PUSCH\n");
           out_ptr = &output[idx];
         } else {
+	  printf("Getting PUSCH\n");
           in_ptr = &input[idx];
         }
         memcpy(out_ptr, in_ptr, grant->L_prb * SRSLTE_NRE * sizeof(cf_t));
+	printf("Data RE len:%d\n",grant->L_prb * SRSLTE_NRE);
         if (advance_input) {
           in_ptr += grant->L_prb * SRSLTE_NRE;
         } else {
@@ -484,6 +489,7 @@ int srslte_pusch_decode(srslte_pusch_t*        q,
          cfg->grant.tb.nof_bits,
          cfg->grant.tb.rv);
 
+    printf("tti:%d\n:",sf->tti);
     /* extract symbols */
     n = pusch_get(q, &cfg->grant, sf_symbols, q->d, sf->shortened);
     if (n != cfg->grant.nof_re) {

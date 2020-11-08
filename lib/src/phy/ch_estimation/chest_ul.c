@@ -296,6 +296,7 @@ int srslte_chest_ul_estimate_pusch(srslte_chest_ul_t*     q,
   int nrefs_sf  = nrefs_sym * SRSLTE_NOF_SLOTS_PER_SF;
   FILE *fp5 = fopen("time.txt","a+");
   fprintf(fp5,"%d\n",sf->tti);
+  printf("rs_tti:%d\n",sf->tti);
   fclose(fp5);
   /* Get references from the input signal */
   srslte_refsignal_dmrs_pusch_get(&q->dmrs_signal, cfg, input, q->pilot_recv_signal);

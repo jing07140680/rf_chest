@@ -1,0 +1,27 @@
+--- command='srsenb /local/repository/etc/enb.conf' version=20.04.1 signal=11 date='04/11/2020 18:41:21' ---
+	srsenb(+0x120ff3) [0x55df58522ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f3b8e198f20]
+	srsenb(+0x79b40) [0x55df5847bb40]
+	srsenb(+0x132fd9) [0x55df58534fd9]
+	srsenb(+0x58fbe) [0x55df5845afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f3b900886db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f3b8e27b88f]
+
+--- command='srsenb /local/repository/etc/enb.conf' version=20.04.1 signal=11 date='04/11/2020 18:41:21' ---
+	srsenb(+0x120ff3) [0x55df58522ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f3b8e198f20]
+	srsenb(+0x79b40) [0x55df5847bb40]
+	srsenb(+0x132fd9) [0x55df58534fd9]
+	srsenb(+0x58fbe) [0x55df5845afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f3b900886db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f3b8e27b88f]
+
+--- command='srsenb /local/repository/etc/enb.conf' version=20.04.1 signal=11 date='04/11/2020 18:41:21' ---
+	srsenb(+0x120ff3) [0x55df58522ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f3b8e198f20]
+	srsenb(+0x79b40) [0x55df5847bb40]
+	srsenb(+0x132fd9) [0x55df58534fd9]
+	srsenb(+0x58fbe) [0x55df5845afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f3b900886db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f3b8e27b88f]
+

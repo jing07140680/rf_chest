@@ -1,0 +1,95 @@
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:20:47' ---
+	srsenb(+0x120ff3) [0x557c9aff2ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f78325d0f20]
+	srsenb(+0x79b40) [0x557c9af4bb40]
+	srsenb(+0x132fd9) [0x557c9b004fd9]
+	srsenb(+0x58fbe) [0x557c9af2afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f78344c06db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f78326b388f]
+
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:20:47' ---
+	srsenb(+0x120ff3) [0x557c9aff2ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f78325d0f20]
+	srsenb(+0x79b40) [0x557c9af4bb40]
+	srsenb(+0x132fd9) [0x557c9b004fd9]
+	srsenb(+0x58fbe) [0x557c9af2afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f78344c06db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f78326b388f]
+
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:20:47' ---
+	srsenb(+0x120ff3) [0x557c9aff2ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f78325d0f20]
+	srsenb(+0x79b40) [0x557c9af4bb40]
+	srsenb(+0x132fd9) [0x557c9b004fd9]
+	srsenb(+0x58fbe) [0x557c9af2afbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f78344c06db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f78326b388f]
+
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:21:01' ---
+	srsenb(+0x120ff3) [0x55afba6edff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7fe104f26f20]
+	srsenb(+0x79b40) [0x55afba646b40]
+	srsenb(+0x132fd9) [0x55afba6fffd9]
+	srsenb(+0x58fbe) [0x55afba625fbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7fe106e166db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7fe10500988f]
+
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:21:01' ---
+	srsenb(+0x120ff3) [0x55afba6edff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7fe104f26f20]
+	srsenb(+0x79b40) [0x55afba646b40]
+	srsenb(+0x132fd9) [0x55afba6fffd9]
+	srsenb(+0x58fbe) [0x55afba625fbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7fe106e166db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7fe10500988f]
+
+--- command='srsenb' version=20.04.1 signal=11 date='04/11/2020 18:21:01' ---
+	srsenb(+0x120ff3) [0x55afba6edff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7fe104f26f20]
+	srsenb(+0x79b40) [0x55afba646b40]
+	srsenb(+0x132fd9) [0x55afba6fffd9]
+	srsenb(+0x58fbe) [0x55afba625fbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7fe106e166db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7fe10500988f]
+
+--- command='srsenb /local/repository/etc/enb.conf' version=20.04.1 signal=11 date='04/11/2020 19:26:54' ---
+	srsenb(+0x120ff3) [0x55e8adc6eff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f7cef70df20]
+	srsenb(+0x79094) [0x55e8adbc7094]
+	srsenb(+0x6b60b) [0x55e8adbb960b]
+	srsenb(+0xa82b8) [0x55e8adbf62b8]
+	srsenb(+0xdb8d4) [0x55e8adc298d4]
+	srsenb(+0xe31f8) [0x55e8adc311f8]
+	srsenb(+0x809eb) [0x55e8adbce9eb]
+	srsenb(+0x7f337) [0x55e8adbcd337]
+	srsenb(+0x58fbe) [0x55e8adba6fbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f7cf15fd6db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f7cef7f088f]
+
+--- command='srsenb --log.rrc_level INFO' version=20.04.1 signal=11 date='07/11/2020 20:37:46' ---
+	srsenb(+0x120ff3) [0x559f16eb4ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f67f968cf20]
+	srsenb(+0x79b40) [0x559f16e0db40]
+	srsenb(+0x132fd9) [0x559f16ec6fd9]
+	srsenb(+0x58fbe) [0x559f16decfbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f67fb57c6db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f67f976f88f]
+
+--- command='srsenb --log.rrc_level INFO' version=20.04.1 signal=11 date='07/11/2020 20:37:46' ---
+	srsenb(+0x120ff3) [0x559f16eb4ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f67f968cf20]
+	srsenb(+0x79b40) [0x559f16e0db40]
+	srsenb(+0x132fd9) [0x559f16ec6fd9]
+	srsenb(+0x58fbe) [0x559f16decfbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f67fb57c6db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f67f976f88f]
+
+--- command='srsenb --log.rrc_level INFO' version=20.04.1 signal=11 date='07/11/2020 20:37:46' ---
+	srsenb(+0x120ff3) [0x559f16eb4ff3]
+	/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f67f968cf20]
+	srsenb(+0x79b40) [0x559f16e0db40]
+	srsenb(+0x132fd9) [0x559f16ec6fd9]
+	srsenb(+0x58fbe) [0x559f16decfbe]
+	/lib/x86_64-linux-gnu/libpthread.so.0(+0x76db) [0x7f67fb57c6db]
+	/lib/x86_64-linux-gnu/libc.so.6(clone+0x3f) [0x7f67f976f88f]
+

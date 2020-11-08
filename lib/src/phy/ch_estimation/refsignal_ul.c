@@ -315,9 +315,6 @@ void srslte_refsignal_dmrs_pusch_get(srslte_refsignal_ul_t* q,
                                      cf_t*                  sf_symbols,
                                      cf_t*                  r_pusch)
 {
-  FILE *fp4 = fopen("frequency.txt","a+");
-  fprintf(fp4,"%d,%d\n",pusch_cfg->grant.n_prb_tilde[0],pusch_cfg->grant.L_prb);
-  fclose(fp4);
   for (uint32_t ns_idx = 0; ns_idx < 2; ns_idx++) {
     printf("Getting DMRS from (start from PRB)n_prb: %d, (total PRB)L: %d, ns_idx: %d\n",
          pusch_cfg->grant.n_prb_tilde[ns_idx],
@@ -331,6 +328,15 @@ void srslte_refsignal_dmrs_pusch_get(srslte_refsignal_ul_t* q,
     memcpy(&r_pusch[ns_idx * SRSLTE_NRE * pusch_cfg->grant.L_prb],
            &sf_symbols[SRSLTE_RE_IDX(q->cell.nof_prb, L, pusch_cfg->grant.n_prb_tilde[ns_idx] * SRSLTE_NRE)],
            pusch_cfg->grant.L_prb * SRSLTE_NRE * sizeof(cf_t));
+
+    FILE *fp4 = fopen("frequency.txt","a+");
+    fprintf(fp4,"%d,%d,%d,%d\n",pusch_cfg->grant.n_prb_tilde[ns_idx],pusch_cfg->grant.L_prb,L,ns_idx);
+    fclose(fp4);
+
+
+    printf("DMRS start(prb):%d\n",pusch_cfg->grant.n_prb_tilde[ns_idx]);
+    printf("DMRS symbol:%d\n",L);
+    printf("DMRS RE len:%d\n",pusch_cfg->grant.L_prb * SRSLTE_NRE);
   }
 }
 
